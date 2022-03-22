@@ -18,11 +18,6 @@ class OrderProductController extends Controller
         $orders = Order::all();
         return view('admin.orders.index', compact('orders'));
     }
-    public function orderStatus(Order $order){
-        $order->status = $order->is_pandding? 0 : 1;
-        $order->save();
-        return back()->with('success', 'Order accepted successfuly!');
-    }
 
     /**
      * Show the form for creating a new resource.

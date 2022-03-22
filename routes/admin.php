@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\WishListController;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,6 +60,6 @@ Route::prefix('/')->middleware(['auth','is_block','is_admin'])->group(function (
     // Route::resource('shipping', ShippingConte)
     Route::resource('ordered_product', OrderProductController::class);
     // OrderStatus
-    Route::get('order-status/{order}', [OrderProductController::class, 'orderStatus'])->name('order.status');
+    Route::get('order-status/{order}', [OrderController::class, 'orderStatus'])->name('order.status');
     Route::resource('order', OrderController::class);
 });

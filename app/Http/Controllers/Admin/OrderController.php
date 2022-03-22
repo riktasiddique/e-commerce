@@ -30,6 +30,14 @@ class OrderController extends Controller
     {
         //
     }
+    public function orderStatus(Order $order){
+        // $order->status = $order->is_pandding? 0 : 1;
+        $order->status = !$order->is_pendding;
+        // $order->status = !$order->is_active? 1: 0;
+        // return $order;
+        $order->save();
+        return back()->with('success', 'Order accepted successfuly!');
+    }
 
     /**
      * Store a newly created resource in storage.
