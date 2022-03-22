@@ -18,7 +18,7 @@ class CartController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $carts = Cart::Where('user_id', $user->id)->paginate(10);
+        $carts = Cart::Where('user_id', $user->id)->latest()->paginate(10);
         return view('admin.all-cart.index', compact('carts', 'user'));
     }
 
@@ -53,21 +53,19 @@ class CartController extends Controller
     {
         //
     }
-    public function addCart($id){
-
+    public function addCart(Request $request, $id){
         $user = Auth()->user();
         $product = Product::find($id);
         $cart = new Cart();
         $cart->user_id = $user->id;
         $cart->image1 = $product->image1;
-        $cart->title = $product->subCategory->name;
+        $cart->category_id = $product->mainCategory->id;
+        $cart->sub_category_id = $product->subCategory->id;
         $cart->price = $product->price;
-        $cart->quantity = $product->quantity;
-        // return $cart;
+        $cart->quantity = $request->quantity;
         $cart->save();
         // return redirect()->route('cart.index')->with('success', 'The Product Addes Successfuly!');
         return back()->with('success', 'The Product Added Successfuly!');
-
             
     }
 
@@ -91,7 +89,7 @@ class CartController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        // return $request->all();
     }
 
     /**

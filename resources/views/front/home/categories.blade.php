@@ -10,7 +10,7 @@
             @foreach ($categories as $category)
                 <div class="box">
                     <h3>{{$category->name}}</h3>
-                    <p>upto 44% off</p>
+                    {{-- <p>upto 44% off</p> --}}
                     <img src="{{url($category->image1)}}" alt="">
                     <a href="{{route('home.product')}}?query={{$category->name}}" class="btn">shop now</a>
                 </div>
@@ -24,7 +24,6 @@
         <div class="box-container">
             @foreach ($products as $product) 
                     <div class="box">
-                        <span class="discount">-33%</span>
                         <div class="icons">
                             <a href="#" class="fas fa-heart"></a>
                             <a href="#" class="fas fa-share"></a>

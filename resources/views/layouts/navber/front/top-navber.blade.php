@@ -20,7 +20,7 @@
             <a href="{{route('home.product')}}">product</a>
             {{-- <a href="#contact">contact</a> --}}
             @auth
-            <a href="#contact">My Deal</a>
+            <a href="{{route('my_deal.index')}}">My Deal</a>
             @else
                 <a href="{{route('login')}}">log in</a>
             @endauth

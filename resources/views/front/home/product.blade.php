@@ -20,7 +20,6 @@
         <div class="box-container">
             @foreach ($products as $product) 
                     <div class="box">
-                        {{-- <span class="discount">-33%</span> --}}
                         <div class="icons">
                             <form action="{{route('home.wish_list', $product->id)}}" method="POST">
                                 @csrf
@@ -31,25 +30,8 @@
                         </div>
                         <img src="{{url($product->image1)}}" alt="">
                         <h3>{{$product->subCategory->name}}</h3>
-                        {{-- <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div> --}}
-                        {{-- <div class="price"> $10.50 <span> $13.20 </span> </div> --}}
                         <div class="price">Price: {{$product->price}} Tk</div>
-                        <div class="quantity">
-                            <span>quantity : </span>
-                            <input type="number" min="1" max="1000" value="{{$product->quantity}}">
-                            <span> /kg </span>
-                        </div>
-                        {{-- <a href="#" class="btn">add to cart</a> --}}
-                        <form action="{{route('product.cart', $product->id)}}" method="post">
-                            @csrf
-                            <button type="submit" class="btn mx-auto w-100">Add Cart</button>
-                        </form>
+                        <a href="{{route('product_details', $product->id)}}" class="btn">View Details</a>
                     </div>
             @endforeach
         </div>

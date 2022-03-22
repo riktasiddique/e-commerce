@@ -1,37 +1,14 @@
-// Product Increse and Decrese
-function productIncreseDecrese(issIncrese){
-   var inputFeild = document.getElementById('cartFeild');
-   var inputFeildValue = parseInt(inputFeild.value);
-   if(issIncrese == true){
-    inputFeildValue = inputFeildValue + 1;
-   }
-   else if(issIncrese == false && inputFeildValue > 1 ){
-        inputFeildValue = inputFeildValue - 1;
-    }
-    inputFeild.value = inputFeildValue;
-    var totalPrice = 100 * inputFeildValue;
-    // var totalPrice = document.getElementById('productPrice').innerText * inputFeildValue;
-    document.getElementById('productPrice').innerText = totalPrice;
-    payAble();
+function totalPrice(){
+  let priceIds = document.querySelectorAll('[id^="productPriceId"]');
+  let total_price = 0;
+  priceIds.forEach(price => total_price += +price.innerText);
+  return total_price;
+  // console.log(total_price);
 }
-// Cart Input Feild
-function cartFeild(){
-    var cartFeild = document.getElementById('cartFeild');
-    var cartFeildValue = cartFeild.value;
-    return cartFeildValue;
+let totalPayable = () =>{
+  document.getElementById('subTotal').innerText = totalPrice();
+  document.getElementById('total').innerText = totalPrice();
+  document.getElementById('shippingCharge').innerText = 50;
+  document.getElementById('payable').innerText = 50 + totalPrice();
 }
-// Product Total Calculation
-function payAble(){
-    // subtotal
-   var subTotal = 100 * cartFeild();
-    document.getElementById('subTotal').innerText = subTotal;
-    // total
-    document.getElementById('total').innerText = subTotal;
-    // shipping
-    var shippingCharge = 50 * cartFeild();
-    document.getElementById('shippingCharge').innerText = shippingCharge;
-    // payable
-    var totalPayable = subTotal + shippingCharge;
-    document.getElementById('payable').innerText = totalPayable;
-
-}
+totalPayable();

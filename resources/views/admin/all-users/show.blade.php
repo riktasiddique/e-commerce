@@ -29,7 +29,6 @@
             </div>
         </div>
     </div>
-
     {{-- Change Role Modal --}}
     <div class="modal fade" id="changeRolemodal" tabindex="-1" role="dialog" aria-labelledby="changeRolemodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm" role="document">

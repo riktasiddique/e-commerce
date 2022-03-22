@@ -42,11 +42,19 @@
                     </ul>
                 </li>
                 {{-- WishList --}}
-                <li class="menu-title"><i class="menu-icon fa fa-group (alias)"></i> All WishList</li><!-- /.menu-title -->
+                <li class="menu-title"><i class="menu-icon fa fa-group (alias)"></i> All WishList</li>
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-circle-o"></i>WishList</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-table"></i><a href="{{route('wish-list.index')}}">WishList Table</a></li>
+                    </ul>
+                </li>
+                {{-- Ordered Product --}}
+                <li class="menu-title"><i class="menu-icon fa fa-group (alias)"></i> All Orderd Product</li>
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-circle-o"></i>Orderd Product</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon fa fa-table"></i><a href="{{route('order.index')}}">Orderd Table</a></li>
                     </ul>
                 </li>
             </ul>

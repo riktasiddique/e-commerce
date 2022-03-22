@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\CartController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MainCategoryController;
+use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\OrderProductController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SubCategoryController;
 use App\Http\Controllers\Admin\UserController;
@@ -55,4 +57,8 @@ Route::prefix('/')->middleware(['auth','is_block','is_admin'])->group(function (
     Route::post('wish-listt/{product}', [WishListController::class, 'wishListStore'])->name('product.wish_list');
     // Shipping
     // Route::resource('shipping', ShippingConte)
+    Route::resource('ordered_product', OrderProductController::class);
+    // OrderStatus
+    Route::get('order-status/{order}', [OrderProductController::class, 'orderStatus'])->name('order.status');
+    Route::resource('order', OrderController::class);
 });

@@ -2,7 +2,6 @@
 @section('title', 'Wish List')
 @section('content')
     <section>
-
         <div class="row justify-content-center">
             <div class="col-md-2">
                 <div class="card p-3">
@@ -18,7 +17,7 @@
                                 <img src=" {{url($wishList->image1)}}"  class="rounded float-start w-100 h-100 p-4" alt="">
                             </div>
                             <div class="col-md-6 p-4">
-                                <h5>Title: {{$wishList->title}}</h5>
+                                <h5>Title: {{$wishList->subCategory->name}}</h5>
                                 <p>Quantity: {{$wishList->quantity}}</p>
                                 <p>Price: {{$wishList->price}}</p>
                                 {{-- <p>Price:</p> --}}

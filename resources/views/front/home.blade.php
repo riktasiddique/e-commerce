@@ -25,7 +25,7 @@
             <img src="{{asset('front/assets/images/banner-1.jpg')}}" alt="">
             <div class="content">
                 <h3>special offer</h3>
-                <p>upto 45% off</p>
+                {{-- <p>upto 45% off</p> --}}
                 <a href="{{route('home.product')}}?query=Vegitables" class="btn">check out</a>
             </div>
         </div>
@@ -34,7 +34,7 @@
             <img src="{{asset('front/assets/images/banner-2.jpg')}}" alt="">
             <div class="content">
                 <h3>limited offer</h3>
-                <p>upto 50% off</p>
+                {{-- <p>upto 50% off</p> --}}
                 <a href="{{route('home.product')}}?query=Fruits" class="btn">check out</a>
             </div>
         </div>
