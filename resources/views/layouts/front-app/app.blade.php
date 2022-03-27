@@ -450,6 +450,20 @@
 <!-- newsletter section ends -->
 
 <!-- footer section starts  -->
+{{-- Chatting --}}
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6240ab8e2abe5b455fc1ddfe/1fv69s9vj';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 
 @include('layouts.navber.front.footer')
 

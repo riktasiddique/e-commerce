@@ -40,6 +40,5 @@
         </div>
 
     </section>
-
     <!-- banner section ends -->
 @endsection
