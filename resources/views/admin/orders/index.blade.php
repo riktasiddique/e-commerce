@@ -15,8 +15,7 @@
                                 <th scope="col">Phone</th>
                                 <th scope="col">Total</th>
                                 <th scope="col">details</th>
-                                <th scope="col">Action</th>
-                                
+                                <th scope="col">Action</th>   
                             </tr>
                         </thead>
                         <tbody>

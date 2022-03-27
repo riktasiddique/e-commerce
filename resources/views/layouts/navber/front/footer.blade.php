@@ -27,11 +27,12 @@
         <div class="box">
             <h3>quick links</h3>
             <div class="links">
-                <a href="#">home</a>
-                <a href="#">category</a>
-                <a href="#">product</a>
-                <a href="#">deal</a>
-                <a href="#">contact</a>
+                <a href="/">home</a>
+                <a href="{{route('home.category')}}">category</a>
+                <a href="{{route('home.product')}}">product</a>
+                <a href="{{route('my_deal.index')}}">deal</a>
+                <a href="{{route('home-add-cart')}}">Add Cart</a>
+                <a href="{{route('home.contact')}}">contact</a>
             </div>
         </div>
 
@@ -41,6 +42,7 @@
                 <a href="#">google play</a>
                 <a href="#">window xp</a>
                 <a href="#">app store</a>
+                <a href=" https://wa.me/+8801533511156?text=I'm%20interested%20in%20your%20product%20for%20sale!%20please%20sent%20me%20product%20details." target="_blank">What's App</a>
             </div>
         </div>
 
